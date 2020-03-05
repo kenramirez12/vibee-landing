@@ -1,0 +1,43 @@
+.steps {
+    position: relative;
+    display: flex;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: calc(100%/6);
+        right: calc(100%/6);
+        top: calc(50% - 2.5px);
+        height: 5px;
+        background-color: #b0affd;
+    }
+}
+
+.step {
+    &__number {
+        &-container {
+            width: calc(100%/3);
+            flex: 1;
+        }
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        --size: 86px;
+        width: var(--size);
+        height: var(--size);
+        background-color: $secondary;
+        margin: 0 auto;
+        border: 10px solid $white;
+        border-radius: 50%;
+        color: $white;
+        font-size: 2.1rem;
+    }
+
+    &__copy {
+        max-width: 18rem;
+        margin: auto;
+        text-align: center;
+    }
+}

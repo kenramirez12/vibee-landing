@@ -1,0 +1,39 @@
+.register-section {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    
+    @include media-breakpoint-up('md') {
+        background-image: url('../img/persona-02.svg');
+    }
+    
+    @media screen and (min-width: 1336px) {
+        background-position-x: 92%;
+    }
+
+    @media screen and (min-width: 1600px) {
+        background-position-x: 85%;
+    }
+
+    @media screen and (min-width: 1800px) {
+        background-position-x: 80%;
+    }
+
+    @media screen and (min-width: 2200px) {
+        background-position-x: 75%;
+    }
+}
+
+#success-container, #register-form-container {
+    display: none;
+	height: 0;
+  	opacity: 0;
+	overflow: hidden;
+    transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
+    
+    &.is-visible {
+        display: block;
+        height: auto;
+        opacity: 1;
+    }
+}

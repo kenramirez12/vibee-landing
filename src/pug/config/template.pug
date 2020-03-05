@@ -3,18 +3,26 @@ block config
 doctype html
 html(lang="es")
   head
-    title My awesome title
+    title Vibee - Rentar tu auto nunca fue tan fácil
     meta(charset="utf-8")
     meta(name="viewport" content="initial-scale=1.0, width=device-width")
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content=twitterAccount)
-    meta(property="og:title" content=pageTitle)
-    meta(property="og:description" content=pageDescription)
+    meta(property="og:title" content="Vibee - Rentar tu auto nunca fue tan fácil")
+    meta(property="og:description" content="¿Tienes un auto y quieres ganar dinero con él? Déjalo en nuestras manos.")
     meta(property="og:image" content=pageImage)
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    script.
+      function onSubmit(token) {
+        document.getElementById("register-form").submit();
+      }
     link(rel="stylesheet" href="assets/css/styles.css")
-    link(rel="shortcut icon" href="img/favicon.png")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    link(rel="shortcut icon" href="assets/img/favicon.png")
     
   body
     block main
 
-    script(src="assets/js/scripts-min.js")
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    script(src="assets/js/aos.min.js")
+    script(src="assets/js/main.js")

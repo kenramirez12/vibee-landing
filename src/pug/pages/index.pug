@@ -5,4 +5,112 @@ append config
   -pageImage = 'https://ed.team/sites/default/files/EDboilerplate-logo.png'
 
 block main
-  include ../includes/main-menu
+  img.path-01(src="assets/img/path-01.svg")
+  img.path-02(src="assets/img/path-02.svg")
+  .page
+    header.header.pt-4.pb-3.py-md-5
+      .container
+        .row
+          .col.d-flex.align-items-center
+            img.logo(src="assets/img/logo.svg", alt="Vibee App")
+            nav.main-nav.ml-auto
+              ul.main-menu.list-inline.mb-0
+                li.d-none.d-md-inline-block.list-inline-item.main-menu__item: a.main-menu__link(href="#") Home
+                li.d-none.d-md-inline-block.list-inline-item.main-menu__item.pl-3: a.main-menu__link.scroll(href="#como-funciona") ¿Cómo funciona?
+                li.list-inline-item.pl-5.main-menu__item: a.btn.btn-primary.scroll(href="#registrarme") REGISTRARME
+    
+    .hero.mb-5
+      .container
+        .row
+          .col-md-5.col-lg-4.d-flex.flex-column.justify-content-center.align-items-start.order-1.order-md-0
+            h1.mb-0.text-secondary.font-weight-bold(data-aos="fade-up" data-aos-delay="") Gana dinero
+            h3.text-primary(data-aos="fade-up" data-aos-delay="150") alquilando tu auto
+            p.py-3(data-aos="fade-up" data-aos-delay="300") ¿Tienes un auto y quieres ganar dinero con él? Déjalo en nuestras manos. Registrándo tu auto, miles de usuarios podrán solicitar alquilarlo por día, semana o hasta un mes. ¡Ganarás dinero por alquiler!
+            a.btn.btn-primary.scroll(href="#como-funciona")(data-aos="fade-up" data-aos-delay="450") CONOCE CÓMO FUNCIONA
+          .col-md-7.col-lg-7.offset-lg-1.order-0.order-md-1
+            img.img-fluid(src="assets/img/hero-illustration.svg")(data-aos="fade-in" data-aos-delay="300")
+
+    section.pb-5
+      .container.py-5
+        .row
+          .col-md-6.d-flex.flex-column.flex-md-row.align-items-center.pb-4.pb-md-0
+            span.h1.text-secondary.font-weight-bold.mb-0.mr-3#registered-number
+            span.h4.text-primary.mb-0 Propietarios registrados
+          .col-md-6.d-flex.flex-column.flex-md-row.align-items-center
+            span.h1.text-secondary.font-weight-bold.mb-0.mr-3
+              span#demand-number
+              | K
+            span.h4.text-primary.mb-0 Usuarios queriendo rentar
+
+    section.my-5.pb-5#como-funciona
+      .container.pt-4
+        .row
+          .col.text-center
+            h1.mb-0.text-secondary.font-weight-bold(data-aos="fade-up") ¿Cómo funciona?
+            h3.text-primary.mb-5(data-aos="fade-up" data-aos-delay="200") ¡Fácil y rápido!
+        .row.pt-4.pb-4.d-none.d-md-block
+          .col
+            .steps
+              .step__number-container
+                .step__number(data-aos="zoom-in" data-aos-delay="") 1
+              .step__number-container
+                .step__number(data-aos="zoom-in" data-aos-delay="200") 2
+              .step__number-container
+                .step__number(data-aos="zoom-in" data-aos-delay="400") 3
+        .row
+          .col-md-4
+            .step__number.d-md-none(data-aos="zoom-in" data-aos-delay="") 1
+            .step__copy.pb-4.pb-md-0
+              h5.text-primary Registra tu auto
+              p Añade la información principal de tu auto, y nos pondremos en contacto contigo para verificar que la información sea correcta
+          .col-md-4
+            .step__number.d-md-none(data-aos="zoom-in" data-aos-delay="") 2
+            .step__copy.pb-4.pb-md-0
+              h5.text-primary Escoge a quien alquilar
+              p Miles de usuarios buscarán autos diariamente y enviaran solicitudes. Si tu auto cumple con sus requerimientos, podrás alquilarlo y ganar dinero
+          .col-md-4
+            .step__number.d-md-none(data-aos="zoom-in" data-aos-delay="") 3
+            .step__copy.pb-4.pb-md-0
+              h5.text-primary Recibe tus pagos
+              p Recibirás una transferencia bancaria en 5 días laborables luego de finalizar un alquiler. ¡Mientras más alquiles, más ganas!
+
+    section.register-section.my-5#registrarme
+      .container.py-5#success-container
+        .row.py-5
+          .col-md-6.offset-md-3.py-5.text-center
+            h1.text-secondary.font-weight-bold(data-aos="fade-up" data-aos-delay="") Gracias por Registrarte
+            p.mt-4.mb-5(data-aos="fade-up" data-aos-delay="200") Muy pronto estaremos cambiando la forma de alquilar autos en Lima y podrás ganar dinero con ellos.
+            a.btn.btn-primary#back-form(href="#") VOLVER
+      .container.pt-5.pb-4#register-form-container.is-visible
+        .row
+          .col.text-center
+            h1.mb-0.text-secondary.font-weight-bold(data-aos="fade-up" data-aos-delay="") ¿Estás listo?
+            h3.text-primary.mb-5(data-aos="fade-up" data-aos-delay="200") ¡Regístrate!
+        .row
+          .col-md-8.offset-md-2.col-lg-6.offset-lg-3
+            form#register-form(action="#" method="POST")
+              .form-row
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="")
+                  input.form-control(type="text" id="firstname" name="firstname" placeholder="Nombres" required)
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="50")
+                  input.form-control(type="text" id="lastname" name="lastname" placeholder="Apellidos" required)
+              .form-group(data-aos="fade-up" data-aos-delay="100")
+                input.form-control(type="email" id="email" name="email" placeholder="Correo electrónico" required)
+              .form-row
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="150")
+                  input.form-control(type="tel" id="phone" name="phone" placeholder="Celular" required)
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="200")
+                  input.form-control(type="number" id="dni" name="dni" placeholder="DNI" required)
+              .form-row
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="250")
+                  input.form-control(type="number" id="age" name="age" placeholder="¿Cuál es tu edad?" required)
+                .form-group.col-md-6(data-aos="fade-up" data-aos-delay="300")
+                  input.form-control(type="number" id="cars" name="cars" placeholder="Cantidad de autos" required)
+              .form-group.text-center.mt-4(data-aos="fade-up" data-aos-delay="350")
+                button.btn.btn-primary(type="submit" id="inputSubmit" name="submit") REGISTRARME
+
+    footer.footer.py-4
+      .container
+        .row
+          .col.text-center
+            small &copy; Vibee 2019 - Todos los derechos reservados

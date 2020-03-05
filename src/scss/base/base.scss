@@ -5,6 +5,31 @@
 }
 
 body {
+  position: relative;
   margin : 0;
   font-family : $font-family;
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+}
+
+.path-01, .path-02 {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.path-01 {
+  top: 0;
+
+  @media screen and (min-width: 1337px) {
+    top: -35%;
+  }
+}
+
+.path-02 {
+  bottom: 0;
 }

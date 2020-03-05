@@ -1,0 +1,19 @@
+.form-control {
+    height: calc(2.2em + .75rem + 2px);
+    padding: .375rem 1rem;
+    line-height: 2.2;
+    border-color: $primary;
+    border-radius: 1em;
+
+    &:disabled {
+        background: #efefff;
+    }
+
+    &::placeholder {
+        color: #8e8e8e;
+    }
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    background-image: url();
+}
